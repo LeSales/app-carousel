@@ -17,7 +17,10 @@ class HomeScreen extends StatelessWidget {
           valueListenable: homeController.index,
           builder: (_, value, __) {
             return ListCustom(
+              titleController: homeController.title,
+              changeTitle: homeController.changeTitle,
               list: homeController.list,
+              inputController: homeController.inputController,
               prevImage: homeController.prevImage,
               nextImage: homeController.nextImage,
               index: homeController.index.value,

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 class HomeController {
   final index = ValueNotifier<int>(0);
+  final inputController = TextEditingController();
+  final title = ValueNotifier<String>('Slider Customizado');
 
   final list = [
     'https://marketingcomcafe.com.br/wp-content/uploads/2017/12/banco-imagens-gratis.png',
@@ -11,6 +13,10 @@ class HomeController {
     'https://kanto.legiaodosherois.com.br/w760-h398-gnw-cfill-q80/wp-content/uploads/2018/10/legiao_2wj0B1QbNfmuqaxlI38d5GyFiUV_RtOHceZA9KChoE.jpg.jpeg',
     'https://storage.googleapis.com/dpw/app/uploads/2009/12/como-otimizar-imagens-web-internet1.jpg'
   ];
+
+  void changeTitle() {
+    title.value = inputController.value.text;
+  }
 
   void nextImage() {
     if ((index.value + 1) == list.length) {
