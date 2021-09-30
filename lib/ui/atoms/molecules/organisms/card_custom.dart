@@ -37,8 +37,8 @@ class CardCustom extends StatelessWidget {
               Container(
                 width: MediaQuery.of(context).size.width * 0.46,
                 child: ButtonCustom(
-                  label: "Prev",
-                  onPress: prevImage,
+                  label: "Next",
+                  onPress: nextImage,
                 ),
               ),
             ],
